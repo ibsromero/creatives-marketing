@@ -6,11 +6,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light background */
+    background-color: #f8f9fa; 
 }
 
 header {
-    background-color: #007bff; /* Blue */
+    background-color: #007bff; 
     color: white;
     padding: 10px 20px;
 }
@@ -21,14 +21,14 @@ header .logo {
 }
 
 nav {
-    background-color: #ff5722; /* Orange */
+    background-color: #ff5722; 
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the nav items */
-    padding: 10px 0; /* Add some padding */
+    justify-content: center; 
+    padding: 10px 0; 
 }
 
 nav ul li {
@@ -36,12 +36,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* White text for nav links */
+    color: white; 
     text-decoration: none;
 }
 
 .hero {
-    background-color: #ffccbc; /* Light orange */
+    background-color: #ffccbc; 
     text-align: center;
     padding: 50px 20px;
 }
@@ -56,18 +56,18 @@ nav ul li a {
 
 .hero button {
     padding: 10px 20px;
-    background-color: #ff5722; /* Orange */
+    background-color: #ff5722; 
     color: white;
     border: none;
     cursor: pointer;
 }
 
 .star-rating .fa-star {
-    color: #ffcc00; /* Gold for stars */
+    color: #ffcc00; 
 }
 
 .star-rating .fa-star.checked {
-    color: #ffcc00; /* Gold for checked stars */
+    color: #ffcc00; 
 }
 
 .products {
@@ -102,10 +102,10 @@ nav ul li a {
 }
 
 .btn-danger {
-    background-color: #ff5722; /* Orange */
+    background-color: #ff5722; 
     border: none;
 }
 
 .btn-danger:hover {
-    background-color: #e64a19; /* Darker orange on hover */
+    background-color: #e64a19; 
 }
