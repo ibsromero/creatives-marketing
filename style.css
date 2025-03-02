@@ -109,3 +109,13 @@ nav ul li a {
 .btn-danger:hover {
     background-color: #e64a19; 
 }
+.footer{
+	color: white;
+	background-color: #FFBF00;
+	margin-left: -720px;
+	height: 10%;
+	bottom: -19%;
+	width: 385%;
+	text-align: left;
+	position: absolute;
+}
