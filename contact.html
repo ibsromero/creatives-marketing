@@ -1,1 +1,47 @@
+<main class="container my-5">
+    <section class="row fade-in">
+        <div class="col-md-6">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" action="https://formspree.io/f/meoeyjyk" method="POST">
+                <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+                <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+                <textarea name="message" class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2>Visit Our Store</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30894.20735207762!2d121.0244745!3d14.554802899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90264a0ed01%3A0x2b066ed57830cace!2sMakati%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1740665423643!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><strong>Address:</strong> 123 Avida, Makati, Manila</p>
+            <p><strong>Phone:</strong> 0924 882 7452</p>
+            <p><strong>Email:</strong> support@5octaves.com</p>
+        </div>
+    </section>
+</main>
 
+<footer class="text-center">
+    <p>&copy; 2025 5 Octaves. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        var form = this;
+
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                window.location.href = "thank-you.html"; // Redirect on success
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        }).catch(error => {
+            alert("Something went wrong. Please try again.");
+        });
+    });
+</script>
