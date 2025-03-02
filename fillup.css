@@ -1,0 +1,108 @@
+.topnav{
+	overflow: hidden;
+	background-color: #007bff;   /* Background color of list talk ref and search */
+}
+	.topnav a{
+	float: right;
+	display: block;
+	color: #FFFFFF;			/* Talk */
+	text-align: center;
+	 padding: 40px 20px;
+	text-decoration: none;
+}
+	.topnav a:hover{
+	background-color: #FFBF00;   /* List Hovering */
+	color: #007bff;
+}
+
+	
+    
+   body {
+    margin: 0px;
+    position: relative; /* Establish a positioning context for the absolute box */
+     font-family: Arial, sans-serif;
+}
+
+.content {
+    margin-right: 220px; /* Space for the box */
+}
+
+.box {
+    position: absolute; /* Position the box absolutely */
+    left: 50%; /* Move the box to the center of the parent */
+    top: 120px; /* Distance from the top edge */
+    width: 500px;
+    height: auto; /* Allow height to adjust based on content */
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #ccc;
+    padding: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%); /* Adjust the box to be centered */
+}
+fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #000000; /* Adjust border thickness and color */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+
+        input[type="text"],
+         input[type="email"],
+         input[type="number"],
+           input[type="date"],
+           input[type="city"]
+            {
+            width: 100%; /* Full width of the box */
+            padding: 10px; /* Padding inside the text box */
+            border: 2px solid #ccc; /* Border style */
+            border-radius: 4px; /* Rounded corners */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        
+  label {
+            margin-top: 10px; /* Space above each label */
+            display: block; /* Make labels block elements */
+        }
+
+        button {
+            width: 50%; /* Full width of the box */
+            padding: 10px; /* Padding inside the button */
+            background-color: #e03444; /* Button background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transform: translateX(50%);
+            margin-top: 20px; /* Space above the button */
+        }
+
+        button:hover {
+            background-color: #808080; /* Darker green on hover */
+        }
+
+
+        textarea {
+            width: 450px; /* Fixed width */
+            height: 100px; /* Fixed height */
+            margin-bottom: 10px;
+            resize: none; /* Prevents resizing */
+        }
+		
+		fieldset {
+    border: 1px solid #808080; /* Change the border color of the fieldset */
+    background-color: #FFFFFF; /* Change the background color of the fieldset */
+    padding: 10px; /* Add some padding inside the fieldset */
+}
+		
+		
+		
+		.footer{
+	color: white;
+	background-color: #FFBF00;
+	margin-left: -720px;
+	height: 10%;
+	bottom: -19%;
+	width: 385%;
+	text-align: left;
+	position: absolute;
+}
