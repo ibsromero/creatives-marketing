@@ -1,5 +1,7 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+/* 🌟 Root Variables */
 :root {
     --orange: #ff7800;
     --black: #130f40;
@@ -7,6 +9,7 @@
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
+/* 🌍 Global Styles */
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -14,4 +17,171 @@
     box-sizing: border-box;
     text-decoration: none;
     transition: all .2s linear;
+}
+
+/* 🌟 Body */
+body {
+    background-color: #eee;
+    padding-top: 100px;
+}
+
+/* 🛒 Header / Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    background: #f17720;
+    box-shadow: var(--box-shadow);
+}
+
+/* 🏷 Logo */
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+/* 🌐 Navbar */
+.header .navbar {
+    display: flex;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+}
+
+/* 🎯 Icons */
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons div {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.icons div:hover {
+    background: var(--orange);
+    color: white;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* 📂 Dropdown Panels */
+.search-form,
+.shopping-cart,
+.login-form,
+.navbar {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    background: white;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    transition: .4s linear;
+}
+
+/* 🎬 Active Class */
+.search-form.active,
+.shopping-cart.active,
+.login-form.active,
+.navbar.active {
+    right: 2rem;
+}
+
+/* 🔎 Search Form */
+.search-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.6rem;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+}
+
+/* 🛍 Shopping Cart */
+.shopping-cart p {
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--light-color);
+}
+
+/* 🔐 Login Form */
+.login-form h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login-form .box {
+    width: 100%;
+    margin: .7rem 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-transform: none;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background: #d9661f;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: block;
+    }
+
+    .header .navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        background: white;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        text-align: center;
+    }
+
+    .header .navbar.active {
+        right: 2rem;
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 1rem 0;
+    }
 }
