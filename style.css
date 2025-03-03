@@ -119,3 +119,10 @@ nav ul li a {
 	text-align: left;
 	position: absolute;
 }
+
+img {
+        background: none !important;
+    }
+    .container {
+        background: transparent !important;
+    }
