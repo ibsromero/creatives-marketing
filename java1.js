@@ -1,36 +1,29 @@
-let searchForm = document.querySelector('.search-form');
+document.addEventListener("DOMContentLoaded", () => {
+    let searchForm = document.querySelector('.search-form');
+    let shoppingCart = document.querySelector('.shopping-cart');
+    let loginForm = document.querySelector('.login-form');
+    let navbar = document.querySelector('.navbar');
 
-document.querySelector('#search-btn').onclick = ()=>{
-    searchForm.classList.toggle('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+    document.querySelector('#search-btn').addEventListener('click', () => {
+        toggleActive(searchForm);
+    });
 
-}
+    document.querySelector('#cart-btn').addEventListener('click', () => {
+        toggleActive(shoppingCart);
+    });
 
-let shoppingCart = document.querySelector('.shopping-cart');
+    document.querySelector('#login-btn').addEventListener('click', () => {
+        toggleActive(loginForm);
+    });
 
-document.querySelector('#cart-btn').onclick = () =>{
-    shoppingCart.classList.toggle('active');
-    searchForm.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
-}
+    document.querySelector('#menu-btn').addEventListener('click', () => {
+        toggleActive(navbar);
+    });
 
-let loginForm = document.querySelector('.login-form');
-
-document.querySelector('#login-btn').onclick = () =>{
-    loginForm.classList.toggle('active');
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    navbar.classList.remove('active');
-}
-
-let navbar = document.querySelector('.navbar');
-
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-}
+    function toggleActive(element) {
+        element.classList.toggle('active');
+        [searchForm, shoppingCart, loginForm, navbar].forEach(el => {
+            if (el !== element) el.classList.remove('active');
+        });
+    }
+});
