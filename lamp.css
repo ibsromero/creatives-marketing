@@ -19,8 +19,9 @@ header {
 
 /* Logo */
 .logo {
-    max-width: 20px;
-    height: auto;
+    width: 60px;  
+    height: auto; 
+    max-width: 100%; 
 }
 
 /* Navbar */
