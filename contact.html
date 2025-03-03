@@ -59,9 +59,10 @@
 </body>
 </html>
 
+
 <script>
     document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
         var form = this;
 
         fetch(form.action, {
@@ -72,12 +73,12 @@
             }
         }).then(response => {
             if (response.ok) {
-                window.location.href = "thank-you.html"; // Redirect on success
+                window.location.href = "thank-you.html"; //Message is sucessfully sent
             } else {
-                alert("Something went wrong. Please try again.");
+                alert("Something went wrong. Please try again."); // Sending Failed
             }
         }).catch(error => {
-            alert("Something went wrong. Please try again.");
+            alert("Something went wrong. Please try again."); //Code catches error
         });
     });
 </script>
