@@ -3,98 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notebook | Creative Marketing</title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        .cart-sidebar {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100%;
-            background: #fff;
-            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-            transition: right 0.3s ease-in-out;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        .cart-sidebar.active {
-            right: 0;
-        }
-        .cart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .cart-footer {
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
+    <title> Yumimmunity | Creatives Marketing Ideas</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="stlyecategories.css">
 </head>
 <body>
-    <section class="container py-5">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/notebook.jpg" class="img-fluid" alt="Notebook">
-            </div>
-            <div class="col-md-6">
-                <h2>Premium Notebook</h2>
-                <p>Stay organized with this high-quality notebook, perfect for school, work, or personal use.</p>
-                <p><strong>Price:</strong> ₱250.00</p>
-                <p><strong>Stock:</strong> Available</p>
-                <div class="input-group mb-3">
-                    <button class="btn btn-outline-secondary" type="button" id="decrease">-</button>
-                    <input type="text" class="form-control text-center" value="1" id="quantity">
-                    <button class="btn btn-outline-secondary" type="button" id="increase">+</button>
-                </div>
-                <button class="btn btn-danger" id="addToCart">Add to Cart</button>
-            </div>
-        </div>
-    </section>
 
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <h5>Shopping Cart</h5>
-            <button class="btn btn-sm btn-danger" id="closeCart">X</button>
+    <!-- Header -->
+    <header class="bg-transparent py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="images/logo.png" alt="We Deliver Smiles" class="logo">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
         </div>
-        <div class="cart-body">
-            <div class="cart-item">
-                <img src="images/notebook.jpg" alt="Notebook" class="img-fluid" style="width: 50px;">
-                <p>Premium Notebook</p>
-                <p>₱250.00</p>
-                <p>Quantity: <span id="cartQuantity">1</span></p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header">School Supplies</h6></li>
+                            <li><a class="dropdown-item" href="notebook.html">Notebook</a></li>
+                            <li><a class="dropdown-item" href="ballpen.html">Stationery</a></li>
+                            <li><h6 class="dropdown-header">Fashion</h6></li>
+                            <li><a class="dropdown-item" href="jacket.html">Clothing</a></li>
+                            <li><a class="dropdown-item" href="cap.html">Accessories</a></li>
+                            <li><h6 class="dropdown-header">Furniture & Extras</h6></li>
+                            <li><a class="dropdown-item" href="lamp.html">Lamp</a></li>
+                            <li><a class="dropdown-item" href="tumbler.html">Tumbler and Mug</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="faqs.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
         </div>
-        <div class="cart-footer">
-            <a href="order-placed.html" class="btn btn-success">Checkout</a>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="container product-section">
+        <img src="lamp.jpg" alt="Product Image" class="product-image">
+        <div class="product-details">
+            <h1 class="product-title">Premium Notebook</h1>
+            <p class="product-description">
+                Stay organized with this high-quality notebook, perfect for school, work, or personal use.
+            </p>
+            <p class="product-price">₱250</p>
+            <p class="stock-info">Stock: <strong>20</strong> items available</p>
+
+            <!-- Quantity and Cart -->
+            <div class="quantity-container">
+                <button class="decrease-quantity">-</button>
+                <span class="quantity-display">1</span>
+                <button class="increase-quantity">+</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <p><b>Categories:</b> Furniture & Extras</p>
         </div>
     </div>
 
-    <script>
-        document.getElementById('increase').addEventListener('click', function() {
-            let quantity = document.getElementById('quantity');
-            quantity.value = parseInt(quantity.value) + 1;
-        });
-        document.getElementById('decrease').addEventListener('click', function() {
-            let quantity = document.getElementById('quantity');
-            if (parseInt(quantity.value) > 1) {
-                quantity.value = parseInt(quantity.value) - 1;
-            }
-        });
-        document.getElementById('addToCart').addEventListener('click', function() {
-            document.getElementById('cartSidebar').classList.add('active');
-            document.getElementById('cartQuantity').innerText = document.getElementById('quantity').value;
-        });
-        document.getElementById('closeCart').addEventListener('click', function() {
-            document.getElementById('cartSidebar').classList.remove('active');
-        });
-    </script>
+    <!-- Footer -->
+    <footer class="footer text-center py-4">
+        <p>&copy; 2025 Creatives Marketing. All rights reserved.</p>
+        <p>John Paul Consulation | Ibrahim Romero | Dwayne Marrion Montanez | Bastique Xzer Johan C. Magsalin</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
