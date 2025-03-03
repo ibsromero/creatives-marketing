@@ -19,11 +19,12 @@ header {
 
 /* Logo */
 .logo {
-    width: 60px !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: 60px; /* Optional */
+    width: 60px !important; 
+    height: auto !important; 
+    max-width: 100%; 
+    display: block;
 }
+
 
 /* Navbar */
 .navbar {
