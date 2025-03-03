@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 950px; /* Set a fixed width for the container */
+    width: 100%; /* Allow it to be responsive */
+    height: 600px; /* Set a fixed height for a square shape */
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for layout */
+}
+.product-image {
+    width: 500px; /* Set a fixed width for the image */
+    height: 400px; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
+	 margin-top: 50px;
+}
+.product-details {
+    flex: 1; /* Allow this section to take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+.product-title {
+    font-size: 24px;
+    margin: 10px 0;
+     border-bottom: 1px solid black; /* Add a green underline */
+    padding-bottom: 5px; /* Add some space between the text and the line */
+}
+.product-description {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 2.0;
+}
+.product-price {
+    font-size: 20px;
+    color: #f17720;
+    margin: 10px 0;
+}
+.stock-quantity-container {
+    display: flex; /* Use flexbox for stock and quantity */
+    justify-content: space-between; /* Space between stock info and quantity */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Margin for spacing */
+}
+.stock-info {
+    font-size: 16px;
+    color: #555; /* Gray color for stock info */
+}
+.quantity-container {
+    display: flex; /* Use flexbox for quantity display */
+    align-items: center; /* Center items vertically */
+}
+
+.quantity-display {
+    font-size: 20px; /* Font size for quantity display */
+    margin: 0 10px; /* Space between display and buttons */
+}
+
+.decrease-quantity,
+.increase-quantity {
+    background-color: smokewhite; /* Background color */
+    color: black; /* Text color */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding for button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+ margin: 0 10px;
+}
+
+.decrease-quantity:hover,
+.increase-quantity:hover {
+    background-color:#f17720 ; /* Darker color on hover */
+}
+
+.add-to-cart {
+    background-color: #f17720; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px; /* Vertical padding */
+    width: 200px; /* Set a specific width for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scaling */
+}
+
+.add-to-cart:hover {
+    background-color: #09264a; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increase the size of the button */
+}
