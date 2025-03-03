@@ -1,87 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notebook Product Page</title>
+    <title>Notebook | Speed Regalo We Deliver Smiles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="notebook.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container d-flex justify-content-between align-items-center py-3">
-            <img src="images/logo.png" alt="We Deliver Smiles" class="img-fluid" style="max-width: 100px;">
-            <form class="form-inline">
-                <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark" type="submit">Search</button>
-            </form>
-        </div>
-    </header>
-    <nav class="bg-warning">
-        <div class="container">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categories
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <h6 class="dropdown-header">School Supplies</h6>
-                                    <a class="dropdown-item" href="notebook.html">Notebook</a>
-                                    <a class="dropdown-item" href="ballpen.html">Stationery</a>
-                                </div>
-                                <div class="col-md-4">
-                                    <h6 class="dropdown-header">Fashion</h6>
-                                    <a class="dropdown-item" href="jacket.html">Clothing</a>
-                                    <a class="dropdown-item" href="cap.html">Accessories</a>
-                                </div>
-                                <div class="col-md-4">
-                                    <h6 class="dropdown-header">Furniture & Extras</h6>
-                                    <a class="dropdown-item" href="lamp.html">Lamp</a>
-                                    <a class="dropdown-item" href="tumblr.html">Tumbler and Mug</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item"><a class="nav-link text-white" href="faqs.html">FAQS</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Speed Regalo</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">School Supplies</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Furniture & Extras</a></li>
             </ul>
         </div>
     </nav>
-    
-    <main class="container py-5">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="notebook.jpg" class="img-fluid" alt="Notebook">
+
+    <div class="container">
+        <!-- Product Image & Details -->
+        <img src="notebook.jpg" alt="Notebook Image" class="product-image">
+        <div class="product-details">
+            <h1 class="product-title">A5 60 Sheets Double Coil Design Notebook</h1>
+            <p class="product-description">Stay organized in style with the A5 Double Coil Spiral Notebook, designed for versatility and convenience.</p>
+            <p class="product-price">₱150</p>
+            <p class="stock-info">Stock: <strong>20</strong> items available</p>
+
+            <!-- Quantity Selection & Add to Cart Button -->
+            <div class="quantity-container">
+                <button class="decrease-quantity">-</button>
+                <span class="quantity-display">1</span>
+                <button class="increase-quantity">+</button>
+                <button class="add-to-cart" onclick="addToCart('A5 Notebook')">Add to Cart</button>
             </div>
-            <div class="col-md-6">
-                <h1>Notebook</h1>
-                <p>High-quality notebook perfect for students and professionals.</p>
-                <p><strong>Price:</strong> $5.99</p>
-                <p><strong>Stock:</strong> Available</p>
-                <div class="d-flex align-items-center">
-                    <button class="btn btn-outline-secondary" id="decrease">-</button>
-                    <input type="text" id="quantity" value="1" class="form-control text-center mx-2" style="width: 50px;" readonly>
-                    <button class="btn btn-outline-secondary" id="increase">+</button>
+            <br>
+            <p><b>Categories:</b> School Supplies</p>
+        </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <div class="container featured-products">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <p>Product 1 Description</p>
                 </div>
-                <button class="btn btn-primary mt-3" id="addToCart">Add to Cart</button>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <p>Product 2 Description</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="product3.jpg" alt="Product 3">
+                    <p>Product 3 Description</p>
+                </div>
             </div>
         </div>
-    </main>
-    
-    <footer class="text-center py-4">
-        <p>&copy; 2025 Speed Regalo. All rights reserved.</p>
-    </footer>
-    
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
