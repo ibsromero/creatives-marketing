@@ -12,20 +12,45 @@
 </head>
 <body>
     <!-- Navigation Menu -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Speed Regalo</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">School Supplies</a></li>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Furniture & Extras</a></li>
+    <nav class="bg-warning">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu dropdown-large" aria-labelledby="navbarDropdown">
+                        <div class="container">
+			<div class="row no-gutters"> <!-- Prevent unwanted spacing -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">School Supplies</h6>
+                                    <a class="dropdown-item" href="notebook.html">Notebook</a>
+                                    <a class="dropdown-item" href="ballpen.html">Staionery</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Fashion</h6>
+                                    <a class="dropdown-item" href="jacket.html">Clothing</a>
+                                    <a class="dropdown-item" href="cap.html">Accessories</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">Furniture & Extras</h6>
+                                    <a class="dropdown-item" href="lamp.html">Lamp</a>
+                                    <a class="dropdown-item" href="tumblr.html">Tumbler and Mug</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link text-white" href="faqs.html">FAQS</a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
-
+    
     <div class="container">
         <!-- Product Image & Details -->
         <img src="notebook.jpg" alt="Notebook Image" class="product-image">
