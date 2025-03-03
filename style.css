@@ -126,3 +126,26 @@ img {
     .container {
         background: transparent !important;
     }
+
+.dropdown-large {
+    width: 600px; 
+    padding: 15px;
+}
+
+.dropdown-menu .row {
+    flex-wrap: nowrap;
+}
+
+.dropdown-menu .col-md-4 {
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    white-space: nowrap;
+    display: block;
+}
+
+.dropdown-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
