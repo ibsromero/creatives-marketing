@@ -147,3 +147,33 @@ header {
     padding: 10px;
     margin-top: auto;
 }
+/* Navbar Fixes */
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+/* Fix Dropdown Behavior */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Improve Dropdown Styling */
+.dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-item {
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Ensure Navbar Text is Bold & Readable */
+.nav-link {
+    font-weight: bold;
+    text-transform: uppercase;
+}
