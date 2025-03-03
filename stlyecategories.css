@@ -18,52 +18,35 @@ header {
     background-color: transparent;
 }
 
-/* Logo */
 .logo {
-    width: 80px !important;
-    height: auto !important;
+    width: 60px;
+    height: auto;
     display: block;
 }
 
 /* Navbar */
 .navbar {
     padding: 10px 15px;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .navbar-nav .nav-item {
     margin-left: 20px;
 }
 
-/* Dropdown Hover Effect */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Main Container */
-.container {
-    max-width: 950px;
-    width: 100%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
 /* Product Section */
-.product-section {
+.container.product-section {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     padding: 50px;
     text-align: center;
-    flex-wrap: wrap;
 }
 
-/* Product Image */
 .product-image {
     width: 100%;
     max-width: 400px;
@@ -73,42 +56,34 @@ header {
     margin-bottom: 20px;
 }
 
-/* Product Details */
 .product-details {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    max-width: 50%;
+    justify-content: center;
+    max-width: 500px;
+    padding: 20px;
 }
 
 .product-title {
     font-size: 24px;
     font-weight: bold;
-    margin: 10px 0;
+    margin-bottom: 10px;
     border-bottom: 1px solid black;
     padding-bottom: 5px;
 }
 
 .product-description {
     font-size: 16px;
-    margin: 10px 0;
-    line-height: 2.0;
+    line-height: 1.8;
+    margin-bottom: 10px;
 }
 
 .product-price {
     font-size: 22px;
     color: #f17720;
     font-weight: bold;
-    margin: 10px 0;
-}
-
-/* Stock & Quantity Container */
-.stock-quantity-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .stock-info {
@@ -120,12 +95,13 @@ header {
 .quantity-container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin: 20px 0;
 }
 
 .quantity-display {
     font-size: 20px;
-    margin: 0 10px;
 }
 
 .decrease-quantity,
@@ -138,7 +114,6 @@ header {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    margin: 0 10px;
 }
 
 .decrease-quantity:hover,
@@ -152,8 +127,7 @@ header {
     background-color: #f17720;
     color: white;
     border: none;
-    padding: 10px;
-    width: 200px;
+    padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -167,4 +141,9 @@ header {
 
 /* Footer */
 .footer {
-    background-color: #FF
+    background-color: #FFBF00;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
