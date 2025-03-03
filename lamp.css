@@ -21,7 +21,7 @@ header {
 .logo {
     width: 60px !important; 
     height: auto !important; 
-    max-width: 100%; 
+    max-width: 60px !important; 
     display: block;
 }
 
