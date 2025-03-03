@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"> <!--MAIN PAGE-->
 <head>
-	  <title>Notebook|Creatives Marketing Ideas</title>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	  <link rel="stylesheet" href="notebook.css">
+    <title>Notebook | Creatives Marketing Ideas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="notebook.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,22 +15,44 @@
         <img src="notebook.jpg" alt="Product Image" class="product-image">
         <div class="product-details">
             <h1 class="product-title">A5 60 Sheets Double Coil Design Notebook Simple Art Style Spiral Notebook Loose Leaf Notebook</h1>
-            <p class="product-description">Stay organized in style with the A5 Double Coil Spiral Notebook, designed for versatility and convenience. Whether for work, study, or creative journaling, this loose-leaf notebook offers the perfect balance of functionality and aesthetics.</p>
-           <br><br><br><br><br>
-		    <p class="product-price">₱150</p>
-            <p class="stock-info">Stock: <strong>20</strong> items available</p> <!-- Stock information -->
-           
-					<div class="quantity-container">
-    <button class="decrease-quantity">-</button> <!-- Button to decrease quantity -->
-    <span class="quantity-display">1</span> <!-- Display current quantity -->
-    <button class="increase-quantity">+</button> <!-- Button to increase quantity -->
-    <button class="add-to-cart" onclick="addToCart('Product Title')">Add to Cart</button>
-</div>
-			<br>
-            <p><b>Categories:</b> School Supplies</p> <!-- Categories text moved here -->
+            <p class="product-description">Stay organized in style with the A5 Double Coil Spiral Notebook, designed for versatility and convenience.</p>
+            <p class="product-price">₱150</p>
+            <p class="stock-info">Stock: <strong>20</strong> items available</p>
+            
+            <div class="quantity-container">
+                <button class="decrease-quantity">-</button>
+                <span class="quantity-display">1</span>
+                <button class="increase-quantity">+</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <br>
+            <p><b>Categories:</b> School Supplies</p>
         </div>
     </div>
+    
+    <!-- Cart Section -->
+    <div class="container">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <button id="checkout-btn" class="btn btn-primary">Checkout</button>
+    </div>
 
-    <script src="script.js"></script> <!-- Link to external JavaScript -->
+    <!-- Checkout Form -->
+    <div id="checkout-form" class="container" style="display:none;">
+        <h2>Checkout</h2>
+        <form action="https://formspree.io/f/your-formspree-id" method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+            <label>Email:</label>
+            <input type="email" name="email" required>
+            <label>Address:</label>
+            <textarea name="address" required></textarea>
+            <label>Order Summary:</label>
+            <textarea name="order" id="order-summary" readonly></textarea>
+            <button type="submit" class="btn btn-success">Submit Order</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
