@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
 }
 .container {
-    max-width: 900px; /* Set a fixed width for the container */
+    max-width: 950px; /* Set a fixed width for the container */
     width: 100%; /* Allow it to be responsive */
     height: 600px; /* Set a fixed height for a square shape */
     margin: auto;
