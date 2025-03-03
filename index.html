@@ -3,197 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials - Creative Marketing Ideas</title>
-<style>
-        
-        .dropdown-large {
-            width: 600px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .footer {
-            color: white;
-            background-color: #FFBF00;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .footer h4 {
-            margin: 0;
-            padding: 5px;
-        }
-    </style>
-
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Main Page | Creatives Marketing</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 </head>
-
- <header>
-        <div class="container d-flex justify-content-between align-items-center py-3">
-            <div class="logo"><img src="logo.png" alt="We Deliver Smiles"></div>
-            <form class="form-inline">
-                <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-        </div>
+<body>
+    <header>
+        <div class="container d-flex justify-content-between align-items-center py-3" style="background: transparent;">
+    <img src="images/logo.png" alt="We Deliver Smiles" class="img-fluid" 
+         style="max-width: 100px; background: none;">
+    <form class="form-inline">
+        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    </div>
     </header>
-
-		<nav class="bg-warning">
+    <nav class="bg-warning">
         <div class="container">
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categories
                     </a>
                     <div class="dropdown-menu dropdown-large" aria-labelledby="navbarDropdown">
                         <div class="container">
+			<div class="row no-gutters"> <!-- Prevent unwanted spacing -->
                             <div class="row">
                                 <div class="col-md-4">
-                                    <h6 class="dropdown-header">Electronics</h6>
-                                    <a class="dropdown-item" href="#">Mobile Phones</a>
-                                    <a class="dropdown-item" href="#">Laptops</a>
-                                    <a class="dropdown-item" href="#">Accessories</a>
+                                    <h6 class="dropdown-header">School Supplies</h6>
+                                    <a class="dropdown-item" href="notebook.html">Notebook</a>
+                                    <a class="dropdown-item" href="ballpen.html">Staionery</a>
                                 </div>
                                 <div class="col-md-4">
                                     <h6 class="dropdown-header">Fashion</h6>
-                                    <a class="dropdown-item" href="#">Men's Clothing</a>
-                                    <a class="dropdown-item" href="#">Women's Clothing</a>
-                                    <a class="dropdown-item" href="#">Shoes</a>
+                                    <a class="dropdown-item" href="jacket.html">Clothing</a>
+                                    <a class="dropdown-item" href="cap.html">Accessories</a>
                                 </div>
                                 <div class="col-md-4">
-                                    <h6 class="dropdown-header">Home & Living</h6>
-                                    <a class="dropdown-item" href="#">Furniture</a>
-                                    <a class="dropdown-item" href="#">Decor</a>
-                                    <a class="dropdown-item" href="#">Kitchenware</a>
+                                    <h6 class="dropdown-header">Furniture & Extras</h6>
+                                    <a class="dropdown-item" href="lamp.html">Lamp</a>
+                                    <a class="dropdown-item" href="tumblr.html">Tumbler and Mug</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">FAQS</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">New Arrivals</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Best Sellers</a></li>
-				<li class="nav-item"><a class="nav-link text-white" href="#">Testimonials</a></li>
-				<li class="nav-item"><a class="nav-link text-white" href="#">About Us</a></li>
-				<li class="nav-item"><a class="nav-link text-white" href="#">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="faqs.html">FAQS</a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+		<li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
 	   <div id="demo" class="carousel slide" data-ride="carousel">
 
-	<!-- Jumbotron Header -->
-  <header class="jumbotron text-center gradient-bg">
-    <h1>CREATIVES MARKETING TESTIMONIALS</h1>
-    <p>See what our customers are saying about us.</p>
-  </header>
+	  <!-- Indicators -->
+	  <ul class="carousel-indicators">
+		<li data-target="#demo" data-slide-to="0" class="active"></li>
+		<li data-target="#demo" data-slide-to="1"></li>
+		<li data-target="#demo" data-slide-to="2"></li>
+	  </ul>
 
-  <!-- Content Section -->
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 id="testimonials">What Our Customers Say</h2>
-        
-       <!-- Testimonial 1 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="L'Oréal Shirt1.jpg" class="rounded-square mb-3" alt="L'Oréal Shirt1." width="150" height="150">
-	<img src="L'Oréal Shirt2.jpg" class="rounded-square mb-3" alt="L'Oréal Shirt2." width="150" height="150">
-	<img src="L'Oréal Shirt3.jpg" class="rounded-square mb-3" alt="L'Oréal Shirt3." width="150" height="150">
-    <p class="card-text">"The Loreal T-shirt is so comfortable and stylish! The fabric feels premium, and it fits perfectly. Definitely my go-to casual wear!"</p>
-    <h5 class="card-title">– Emma R.</h5>
-	</div>
-	</div>
-<!-- Testimonial 2 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="Matrix1.jpg" class="rounded-square mb-3" alt="Matrix1." width="150" height="150">
-	<img src="Matrix1.jpg" class="rounded-square mb-3" alt="Matrix2." width="150" height="150">
-	<img src="Matrix1.jpg" class="rounded-square mb-3" alt="Matrix3." width="150" height="150">
-    <p class="card-text">"This jacket is both warm and lightweight. The quality is top-notch, and the design is sleek. I’ve received so many compliments!"</p>
-    <h5 class="card-title">– James L.</h5>
-	</div>
-	</div>
-	<!-- Testimonial 3 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="L'Oréal Philippines1.jpg" class="rounded-square mb-3" alt="L'Oréal Philippines1." width="150" height="150">
-	<img src="L'Oréal Philippines2.jpg" class="rounded-square mb-3" alt="L'Oréal Philippines2." width="150" height="150">
-	<img src="L'Oréal Philippines3.jpg" class="rounded-square mb-3" alt="L'Oréal Philippines3." width="150" height="150">
-    <p class="card-text">"Great fit and fantastic material! The Loreal cap adds the perfect finishing touch to my outfits. Highly recommended!"</p>
-    <h5 class="card-title">– Chris T.</h5>
-	</div>
-	</div>
-	<!-- Testimonial 4 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="valorant1.jpg" class="rounded-square mb-3" alt="valorant1." width="150" height="150">
-	<img src="valorant2.jpg" class="rounded-square mb-3" alt="valorant2." width="150" height="150">
-	<img src="valorant3.jpg" class="rounded-square mb-3" alt="valorant13." width="150" height="150">
-    <p class="card-text">"Stylish, spacious, and durable! This tote bag is perfect for carrying my essentials, and the design is a must-have for Valorant fans!"</p>
-    <h5 class="card-title">– Samantha P.</h5>
-	</div>
-	</div>
-	<!-- Testimonial 5 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="Yumimmunity1.jpg" class="rounded-square mb-3" alt=" Yumimmunity1." width="150" height="150">
-	<img src=" Yumimmunity2.jpg" class="rounded-square mb-3" alt=" Yumimmunity2." width="150" height="150">
-	<img src=" Yumimmunity1.jpg" class="rounded-square mb-3" alt=" Yumimmunity3." width="150" height="150">
-    <p class="card-text">"I love the paper quality! It’s smooth to write on, and the notebook itself is sturdy. Perfect for my daily notes!"</p>
-    <h5 class="card-title">– Daniel M.</h5>
-	</div>
-	</div>
-	<!-- Testimonial 6 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="Fujitsu1.jpg" class="rounded-square mb-3" alt="Fujitsu1." width="150" height="150">
-	<img src="Fujitsu1.jpg" class="rounded-square mb-3" alt="Fujitsu2." width="150" height="150">
-	<img src="Fujitsu1.jpg" class="rounded-square mb-3" alt="Fujitsu3." width="150" height="150">
-    <p class="card-text">"This pen writes like a dream—smooth, no smudging, and comfortable to hold. Easily my favorite pen now!"</p>
-    <h5 class="card-title">– Sarah J.</h5>
-	</div>
-	</div>
-	<!-- Testimonial 7 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="lamp1.jpg" class="rounded-square mb-3" alt="lamp1." width="150" height="150">
-	<img src="lamp3.jpg" class="rounded-square mb-3" alt="lamp2." width="150" height="150">
-	<img src="lamp2.jpg" class="rounded-square mb-3" alt="lamp3." width="150" height="150">
-    <p class="card-text">"The perfect lamp for my desk! It provides great lighting, and the sleek design matches my room aesthetic."</p>
-    <h5 class="card-title">– Michael V.</h5>
-	</div>
-	</div>
-	<!-- Testimonial 8 -->
-	<div class="card mb-4 shadow-effect rounded-corners">
-	<div class="card-body text-center">
-    <img src="Mug1.jpg" class="rounded-square mb-3" alt="Mug1." width="150" height="150">
-	<img src="Tumbler1.jpg" class="rounded-square mb-3" alt="Tumbler1." width="150" height="150">
-	 <img src="Mug1.jpg" class="rounded-square mb-3" alt="Mug2." width="150" height="150">
-    <p class="card-text">"Both the tumbler and mug are excellent quality. They keep my drinks at the right temperature for hours. Definitely worth it!"</p>
-    <h5 class="card-title">– Lena K.</h5>
-	</div>
-	</div>
-      </div>
-    </div>
-  </div>
+	  <!-- The slideshow -->
+	  <div class="carousel-inner">
+		<div class="carousel-item active">
+		  <img src="images/valorant1.jpg" alt="Item 1">
+		</div>
+		<div class="carousel-item">
+		  <img src="images/L_Oréal Philippines1.jpg" alt="Item 2">
+		</div>
+		<div class="carousel-item">
+		  <img src="images/shirt.jpg" alt="Item 3">
+		</div>
+	  </div>
 
-  <!-- Footer -->
-    <div class="footer">
-        <h4 style="font-family:Trebuchet MS; margin-left: 100px; font-size: 23px;"> Contact Us </h4>
-        <h4 style="font-family:Trebuchet MS; margin-left: 100px; font-size: 17px;"> 09476592876 </h4>
-        <h4 style="font-family:Trebuchet MS; margin-left: 100px; font-size: 17px;"> @CreativesMarketingIdeas</h4>
-    </div>
+	  <!-- Left and right controls -->
+	  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	  </a>
+	  <a class="carousel-control-next" href="#demo" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	  </a>
+	  <a class="carousel-control-next" href="#demo" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	  </a>
 
+	</div>
 
-    <!-- JavaScript (Bootstrap & Dependencies) -->
+    <section class="products py-4">
+        <div class="container">
+            <h2 class="text-center">Featured Products</h2>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="3.png" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Charge Flex Gift Set</h5>
+                            <p class="card-text">₱5,100.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+ 						</div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="4.png" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Dual Boost Gift Set</h5>
+                            <p class="card-text">₱3,900.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="11.png" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Move & Brew Set</h5>
+                            <p class="card-text">₱3,340.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="5.jpg" class="card-img-top" alt="Product 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hennessy Cognac Set</h5>
+                            <p class="card-text">₱10,250.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional Products -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="6.jpg" class="card-img-top" alt="Product 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Sweet & Savory Set</h5>
+                            <p class="card-text">₱3,230.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="7.png" class="card-img-top" alt="Product 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Canned Goods Set</h5>
+                            <p class="card-text">₱4,415.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="8.jpg" class="card-img-top" alt="Product 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Breakfast Gift Set</h5>
+                            <p class="card-text">₱4,090.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="9.jpg" class="card-img-top" alt="Product 8">
+                        <div class="card-body">
+                            <h5 class="card-title">Confectioneries Set</h5>
+                            <p class="card-text">₱5,070.00</p>
+                            <div class="star-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <a href="order-form.html" class="btn btn-danger">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-center py-4">
+        <p>&copy; 2023 Shopee Clone. All rights reserved.</p>
+    </footer>
+
+   <!-- JavaScript (Bootstrap & Dependencies) -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -208,11 +262,5 @@
             });
         });
     </script>
-
-   
-</body>
-</html>
-
-
 </body>
 </html>
