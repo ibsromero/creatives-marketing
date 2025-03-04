@@ -2,48 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Marketing Ideas</title>
-    
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    
-    <!-- jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <!-- Custom CSS & JS -->
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="java1.js"></script>
-
-    import { setupCart } from './cart.js';
-
-document.addEventListener("DOMContentLoaded", () => {
-    setupCart();
-});
-
 </head>
 <body>
 
-<!-- Header Section -->
-<header class="header d-flex justify-content-between align-items-center p-3 bg-light">
-    <img src="images/logo.png" alt="We Deliver Smiles" class="img-fluid" style="max-width: 100px; background: none;">
-    
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+<header class="header">
+    <img src="images/logo.png" alt="We Deliver Smiles" class="logo">
+    <nav class="navbar navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-expanded="false">
-                        Categories
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Categories</a>
                     <ul class="dropdown-menu">
                         <li><h6 class="dropdown-header">School Supplies</h6></li>
                         <li><a class="dropdown-item" href="notebook.html">Notebook</a></li>
@@ -51,20 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         <li><h6 class="dropdown-header">Fashion</h6></li>
                         <li><a class="dropdown-item" href="jacket.html">Clothing</a></li>
                         <li><a class="dropdown-item" href="cap.html">Accessories</a></li>
-                        <li><h6 class="dropdown-header">Furniture & Extras</h6></li>
-                        <li><a class="dropdown-item" href="lamp.html">Lamp</a></li>
-                        <li><a class="dropdown-item" href="tumblr.html">Tumbler and Mug</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Icons -->
     <div class="icons">
         <i class="fas fa-bars" id="menu-btn"></i>
         <i class="fas fa-search" id="search-btn"></i>
@@ -73,29 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 </header>
 
-<!-- Bootstrap Carousel -->
+<!-- Carousel -->
 <div id="demo" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
     <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
         <li data-target="#demo" data-slide-to="1"></li>
         <li data-target="#demo" data-slide-to="2"></li>
     </ul>
-
-    <!-- The slideshow -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/valorant1.jpg" alt="Item 1" class="d-block w-100">
+            <img src="images/valorant1.jpg" alt="Item 1" class="carousel-img">
         </div>
         <div class="carousel-item">
-            <img src="images/L_Oréal Philippines1.jpg" alt="Item 2" class="d-block w-100">
+            <img src="images/L_Oréal Philippines1.jpg" alt="Item 2" class="carousel-img">
         </div>
         <div class="carousel-item">
-            <img src="images/Yumimmunity1.jpg" alt="Item 3" class="d-block w-100">
+            <img src="images/Yumimmunity1.jpg" alt="Item 3" class="carousel-img">
         </div>
     </div>
-
-    <!-- Controls -->
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </a>
@@ -104,45 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
     </a>
 </div>
 
-<!-- Featured Products Section -->
-<section class="container mt-4">
-    <h2 class="text-center">Featured Items</h2>
-    <div class="row">
-        <!-- Repeated Product Items -->
-        <div class="col-md-3 text-center" data-name="Product 1" data-price="100">
-            <img src="https://via.placeholder.com/150" alt="Product 1">
-            <h5>Product 1</h5>
-            <p>₱100</p>
-            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-        </div>
-        <div class="col-md-3 text-center" data-name="Product 2" data-price="200">
-            <img src="https://via.placeholder.com/150" alt="Product 2">
-            <h5>Product 2</h5>
-            <p>₱200</p>
-            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-        </div>
-        <div class="col-md-3 text-center" data-name="Product 3" data-price="300">
-            <img src="https://via.placeholder.com/150" alt="Product 3">
-            <h5>Product 3</h5>
-            <p>₱300</p>
-            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-        </div>
-        <div class="col-md-3 text-center" data-name="Product 4" data-price="400">
-            <img src="https://via.placeholder.com/150" alt="Product 4">
-            <h5>Product 4</h5>
-            <p>₱400</p>
-            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-        </div>
-    </div>
-</section>
-
 <!-- Footer -->
-<footer class="footer text-center py-4">
+<footer class="footer">
     <p>&copy; 2025 Creatives Marketing. All rights reserved.</p>
-    <p>John Paul Consulation | Ibrahim Romero | Dwayne Marrion Montanez | Bastique Xzer Johan C. Magsalin</p>
 </footer>
 
-<!-- Custom JS -->
-<script src="scripts.js"></script>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="module" src="java1.js"></script>
 </body>
 </html>
