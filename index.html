@@ -14,7 +14,10 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="styles.css">
-	<style>
+<style>
+body 
+{
+		
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 	:root{
@@ -26,6 +29,16 @@
 		--outline:.1rem solid rgba(0,0,0,.1);
 		--outline-hover:.2rem solid var(--black);
 	}
+	 .carousel-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px; /* Adjust as needed */
+        }
+        .carousel-item img {
+            max-height: 100%;
+            width: auto;
+        }
 
 	.header {
 		background-color: #130f40; /* Your requested navbar color */
@@ -449,7 +462,9 @@
 		padding: 10px;
 		margin-top: auto;
 	}
-	</style>
+	
+}
+</style>
 </head>
 
 
@@ -634,7 +649,8 @@
 <!-- custom JS file link -->
     <script src="scripts.js"></script>
 	
-	<script>
+<script>
+
 	let searchForm = document.querySelector('.search-form');
 
 	document.querySelector('#search-btn').onclick = ()=>{
@@ -765,8 +781,7 @@
 		// Initial update to set up the empty cart
 		updateCartDisplay();
 	});
-	</script>
-
+</script>
 
 </body>
 </html>
