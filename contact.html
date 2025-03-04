@@ -6,9 +6,21 @@
     <title>Contact | Creatives Marketing Ideas </title>
     <link rel="stylesheet" href="stlyecategories.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .btn-orange {
+            background-color: #ff7800; /* Orange color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+        }
+
+        .btn-orange:hover {
+            background-color: #e76a00; /* Darker orange for hover effect */
+            color: white; /* Keep text color white on hover */
+        }
+    </style>
 </head>
-    
-<!-- Header -->
+<body>
+    <!-- Header -->
     <header class="bg-transparent py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <img src="images/logo.png" alt="We Deliver Smiles" class="logo">
@@ -49,69 +61,64 @@
                     <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-        </div>
+        </ </div>
     </nav>
 
+    <main class="container my-5">
+        <section class="row fade-in">
+            <div class="col-md-6">
+                <h2>Get in Touch</h2>
+                <form id="contactForm" action="https://formspree.io/f/xwpvgnde" method="POST">
+                    <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+                    <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+                    <textarea name="message" class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-orange w-100">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Visit Our Store</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30894.20735207762!2d121.0244745!3d14.554802899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90264a0ed01%3A0x2b066ed57830cace!2sMakati%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1740665423643!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><strong>Address:</strong> 123 Avida, Makati, Manila</p>
+                <p><strong>Phone:</strong> 0960 284 8254</p>
+                <p><strong>Email:</strong> orders@creativemarketingideas.ph</p>
+                <a href="https://www.facebook.com/creativemarketingideasph/" target="_blank">
+                    <img src="https://img.freepik.com/premium-vector/art-illustration_929495-41.jpg?semt=ais_hybrid" alt="Facebook" width="30" height="30">
+                </a>
+            </div>
+        </section>
+    </main>
 
-<main class="container my-5">
-    <section class="row fade-in">
-        <div class="col-md-6">
-            <h2>Get in Touch</h2>
-            <form id="contactForm" action="https://formspree.io/f/xwpvgnde" method="POST">
-                <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
-                <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
-                <textarea name="message" class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
-        </div>
-        <div class="col-md-6">
-            <h2>Visit Our Store</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30894.20735207762!2d121.0244745!3d14.554802899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90264a0ed01%3A0x2b066ed57830cace!2sMakati%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1740665423643!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p><strong>Address:</strong> 123 Avida, Makati, Manila</p>
-            <p><strong>Phone:</strong> 0960 284 8254</p>
-            <p><strong>Email:</strong> orders@creativemarketingideas.ph</p>
-            <a href="https://www.facebook.com/creativemarketingideasph/" target="_blank">
-            <img src="https://img.freepik.com/premium-vector/art-illustration_929495-41.jpg?semt=ais_hybrid" alt="Facebook" width="30" height="30">
-</a>
-
-        </div>
-    </section>
-</main>
     <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        var form = this;
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var form = this;
 
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                window.location.href = "thank-you.html"; //Message is sucessfully sent
-            } else {
-                alert("Something went wrong. Please try again."); // Sending Failed
-            }
-        }).catch(error => {
-            alert("Something went wrong. Please try again."); //Code catches error
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = "thank-you.html"; //Message is successfully sent
+                } else {
+                    alert("Something went wrong. Please try again."); // Sending Failed
+                }
+            }).catch(error => {
+                alert("Something went wrong. Please try again."); //Code catches error
+            });
         });
-    });
-        
+    </script>
+
     <!-- Footer -->
     <footer class="footer text-center py-4 bg-light">
         <p>&copy; 2025 Creatives Marketing. All rights reserved.</p>
         <p>John Paul Consulation | Ibrahim Romero | Dwayne Marrion Montanez | Bastique Xzer Johan C. Magsalin</p>
     </footer>
-    
-</script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
