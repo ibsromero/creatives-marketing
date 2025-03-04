@@ -14,8 +14,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="styles.css">
-<style>		
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 	:root{
 		--orange:#ff7800;
@@ -25,11 +25,7 @@
 		--border:.2rem solid rgba(0,0,0,.1);
 		--outline:.1rem solid rgba(0,0,0,.1);
 		--outline-hover:.2rem solid var(--black);
-        }
-        .carousel-item img {
-            max-height: 100%;
-            width: auto;
-        }
+	}
 
 	.header {
 		background-color: #130f40; /* Your requested navbar color */
@@ -216,7 +212,45 @@
 	.btn:hover{
 		background: var(--orange);
 		color: #fff;
-
+	}
+	.header .login-form{
+		width: 35rem;
+		background-color: #fff;
+		box-shadow: var(--box-shadow);
+		padding: 2rem;
+		border-radius: .5rem;
+		text-align: center;
+		top: 110%; right: -110%;
+		position: absolute;
+	}
+	 .header .login-form.active{
+		right: 2rem;
+		transition: .4s linear;
+	 }
+	.header .login-form h3{
+		font-size: 2.5rem;
+		color: var(--black);
+		text-transform: uppercase;
+	}
+	.header .login-form .box{
+		width: 100%;
+		margin: .7rem 0;
+		background: #eee;
+		border-radius: .5rem;
+		padding: 1rem;
+		font-size: 1.6rem;
+		color: var(--black);
+		text-transform: none;
+	}
+	.header .login-form p{
+		font-size: 1.4rem;
+		padding: .5rem 0;
+		color: var(--light-color);
+	}
+	.header .login-form p a{
+		color: var(--orange);
+		text-decoration: underline;
+	}
 
 	/* Navbar Styling */
 	.header {
@@ -415,47 +449,7 @@
 		padding: 10px;
 		margin-top: auto;
 	}
-	}
-	.header .login-form{
-		width: 35rem;
-		background-color: #fff;
-		box-shadow: var(--box-shadow);
-		padding: 2rem;
-		border-radius: .5rem;
-		text-align: center;
-		top: 110%; right: -110%;
-		position: absolute;
-	}
-	 .header .login-form.active{
-		right: 2rem;
-		transition: .4s linear;
-	 }
-	.header .login-form h3{
-		font-size: 2.5rem;
-		color: var(--black);
-		text-transform: uppercase;
-	}
-	.header .login-form .box{
-		width: 100%;
-		margin: .7rem 0;
-		background: #eee;
-		border-radius: .5rem;
-		padding: 1rem;
-		font-size: 1.6rem;
-		color: var(--black);
-		text-transform: none;
-	}
-	.header .login-form p{
-		font-size: 1.4rem;
-		padding: .5rem 0;
-		color: var(--light-color);
-	}
-	.header .login-form p a{
-		color: var(--orange);
-		text-decoration: underline;
-	}
-}
-</style>
+	</style>
 </head>
 
 
@@ -465,24 +459,16 @@
     <img src="images/logo.png" alt="We Deliver Smiles" class="img-fluid" 
      style="max-width: 100px; background: none;">
     <nav class="navbar">
-        <a href="index.html">Home</a>
+        <a href="#home">Home</a>
 		<div class="dropdown">
             <a class="dropdown-toggle" href="#" id="categoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categories
             </a>
-            <ul class="dropdown-menu">
-    <li><h6 class="dropdown-header">School Supplies</h6></li>
-    <li><a class="dropdown-item" href="notebook.html">Notebook</a></li>
-    <li><a class="dropdown-item" href="ballpen.html">Stationery</a></li>
-
-    <li><h6 class="dropdown-header">Fashion</h6></li>
-    <li><a class="dropdown-item" href="jacket.html">Clothing</a></li>
-    <li><a class="dropdown-item" href="cap.html">Accessories</a></li>
-
-    <li><h6 class="dropdown-header">Furniture & Extras</h6></li>
-    <li><a class="dropdown-item" href="lamp.html">Lamp</a></li>
-    <li><a class="dropdown-item" href="tumblr.html">Tumbler and Mug</a></li>
-</ul>
+            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+                <a class="dropdown-item" href="#Fashion">Fashion</a>
+                <a class="dropdown-item" href="#School-Supplies">School Supplies</a>
+                <a class="dropdown-item" href="#Furniture-Extras">Furniture & Extras</a>
+            </div>
         </div>  
         <a href="#About US">About Us</a>  
         <a href="#FAQS">FAQS</a>  
@@ -536,8 +522,18 @@
         <a href="#" class="btn">checkout</a>
     </div>
 
+    <form action="" class="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box">
+        <input type="password" placeholder="your password" class="box">
+        <p>forget your password <a href="#">click here</a></p>
+        <p>don't have an account <a href="#">create now</a></p>
+        <input type="submit" value="login now" class="btn">
+    </form>
+
 </header>
 
+<!-- Header section end -->
 
 <!-- Bootstrap Carousel -->
 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -553,13 +549,13 @@
 	  <!-- The slideshow -->
 	  <div class="carousel-inner">
 		<div class="carousel-item active">
-		  <img src="images/product1.jpg" alt="Item 1">
+		  <img src="images/valorant1.jpg" alt="Item 1">
 		</div>
 		<div class="carousel-item">
-		  <img src="images/product2.jpg" alt="Item 2">
+		  <img src="images/L_Oréal Philippines1.jpg" alt="Item 2">
 		</div>
 		<div class="carousel-item">
-		  <img src="images/product3.jpg" alt="Item 3">
+		  <img src="images/Yumimmunity1.jpg" alt="Item 3">
 		</div>
 	  </div>
 
@@ -637,8 +633,7 @@
 <!-- custom JS file link -->
     <script src="scripts.js"></script>
 	
-<script>
-
+	<script>
 	let searchForm = document.querySelector('.search-form');
 
 	document.querySelector('#search-btn').onclick = ()=>{
@@ -769,8 +764,8 @@
 		// Initial update to set up the empty cart
 		updateCartDisplay();
 	});
-	
-</script>
+	</script>
+
 
 </body>
 </html>
