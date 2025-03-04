@@ -640,53 +640,52 @@
 
 <!-- custom JS file link -->
     <script src="scripts.js"></script>
-	
-	<script>
+<script>
 	let searchForm = document.querySelector('.search-form');
 
-document.querySelector('#search-btn').onclick = ()=>{
-    searchForm.classList.toggle('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+	document.querySelector('#search-btn').onclick = ()=>{
+    	searchForm.classList.toggle('active');
+    	shoppingCart.classList.remove('active');
+    	loginForm.classList.remove('active');
+    	navbar.classList.remove('active');
 
 }
 
-let shoppingCart = document.querySelector('.shopping-cart');
+	let shoppingCart = document.querySelector('.shopping-cart');
 
-document.querySelector('#cart-btn').onclick = () =>{
-    shoppingCart.classList.toggle('active');
-    searchForm.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+	document.querySelector('#cart-btn').onclick = () =>{
+    	shoppingCart.classList.toggle('active');
+    	searchForm.classList.remove('active');
+    	loginForm.classList.remove('active');
+    	navbar.classList.remove('active');
 }
 
-let loginForm = document.querySelector('.login-form');
+	let loginForm = document.querySelector('.login-form');
 
-document.querySelector('#login-btn').onclick = () =>{
-    loginForm.classList.toggle('active');
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    navbar.classList.remove('active');
+	document.querySelector('#login-btn').onclick = () =>{
+    	loginForm.classList.toggle('active');
+    	searchForm.classList.remove('active');
+    	shoppingCart.classList.remove('active');
+    	navbar.classList.remove('active');
 }
 
-let navbar = document.querySelector('.navbar');
+	let navbar = document.querySelector('.navbar');
 
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
+	document.querySelector('#menu-btn').onclick = () =>{
+    	navbar.classList.toggle('active');
+    	searchForm.classList.remove('active');
+    	shoppingCart.classList.remove('active');
+    	loginForm.classList.remove('active');
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    // Reference to the shopping cart container
-    const shoppingCartContainer = document.querySelector('.shopping-cart');
-    // Array to hold cart items
-    let cartItems = [];
+	document.addEventListener("DOMContentLoaded", function(){
+    	// Reference to the shopping cart container
+    	const shoppingCartContainer = document.querySelector('.shopping-cart');
+    	// Array to hold cart items
+    	let cartItems = [];
 
-    // Function to update the cart display and total
-    function updateCartDisplay() {
+    	// Function to update the cart display and total
+    	function updateCartDisplay() {
         let cartHTML = '';
         let total = 0;
         // Build each cart item
@@ -772,8 +771,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // Initial update to set up the empty cart
     updateCartDisplay();
 });
-	</script>
-
+</script>
 
 </body>
 </html>
