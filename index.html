@@ -771,6 +771,19 @@
     // Initial update to set up the empty cart
     updateCartDisplay();
 });
+document.addEventListener("DOMContentLoaded", function(){
+    // Remove the login icon
+    const loginIcon = document.getElementById("login-btn");
+    if(loginIcon){
+        loginIcon.remove();
+    }
+    
+    // Remove the login form
+    const loginForm = document.querySelector(".login-form");
+    if(loginForm){
+        loginForm.remove();
+    }
+});
 </script>
 
 </body>
