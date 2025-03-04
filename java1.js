@@ -1,47 +1,51 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Reference UI elements
-    let searchForm = document.querySelector('.search-form');
-    let shoppingCart = document.querySelector('.shopping-cart');
-    let loginForm = document.querySelector('.login-form');
-    let navbar = document.querySelector('.navbar');
+let searchForm = document.querySelector('.search-form');
 
-    // Toggle Functions
-    document.querySelector('#search-btn').onclick = () => {
-        searchForm.classList.toggle('active');
-        shoppingCart.classList.remove('active');
-        loginForm.classList.remove('active');
-        navbar.classList.remove('active');
-    };
+document.querySelector('#search-btn').onclick = ()=>{
+    searchForm.classList.toggle('active');
+    shoppingCart.classList.remove('active');
+    loginForm.classList.remove('active');
+    navbar.classList.remove('active');
 
-    document.querySelector('#cart-btn').onclick = () => {
-        shoppingCart.classList.toggle('active');
-        searchForm.classList.remove('active');
-        loginForm.classList.remove('active');
-        navbar.classList.remove('active');
-    };
+}
 
-    document.querySelector('#login-btn').onclick = () => {
-        loginForm.classList.toggle('active');
-        searchForm.classList.remove('active');
-        shoppingCart.classList.remove('active');
-        navbar.classList.remove('active');
-    };
+let shoppingCart = document.querySelector('.shopping-cart');
 
-    document.querySelector('#menu-btn').onclick = () => {
-        navbar.classList.toggle('active');
-        searchForm.classList.remove('active');
-        shoppingCart.classList.remove('active');
-        loginForm.classList.remove('active');
-    };
+document.querySelector('#cart-btn').onclick = () =>{
+    shoppingCart.classList.toggle('active');
+    searchForm.classList.remove('active');
+    loginForm.classList.remove('active');
+    navbar.classList.remove('active');
+}
 
-    // Shopping cart functionality
+let loginForm = document.querySelector('.login-form');
+
+document.querySelector('#login-btn').onclick = () =>{
+    loginForm.classList.toggle('active');
+    searchForm.classList.remove('active');
+    shoppingCart.classList.remove('active');
+    navbar.classList.remove('active');
+}
+
+let navbar = document.querySelector('.navbar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+    searchForm.classList.remove('active');
+    shoppingCart.classList.remove('active');
+    loginForm.classList.remove('active');
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    // Reference to the shopping cart container
     const shoppingCartContainer = document.querySelector('.shopping-cart');
+    // Array to hold cart items
     let cartItems = [];
 
+    // Function to update the cart display and total
     function updateCartDisplay() {
         let cartHTML = '';
         let total = 0;
-
+        // Build each cart item
         cartItems.forEach((item, index) => {
             cartHTML += `
             <div class="box" data-index="${index}">
@@ -56,65 +60,71 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             total += item.price * item.qty;
         });
-
-        cartHTML += `<div class="total">Total: ₱${total.toFixed(2)}/-</div>
-        <a href="#" class="btn" id="checkout-btn">Checkout</a>`;
-
+        // Append total and checkout button at the end
+        cartHTML += `<div class="total">total : ₱${total.toFixed(2)}/-</div>
+        <a href="#" class="btn" id="checkout-btn">checkout</a>`;
         shoppingCartContainer.innerHTML = cartHTML;
-
-        // Use event delegation for trash icons
-        shoppingCartContainer.addEventListener('click', function(event) {
-            if (event.target.classList.contains('trash-icon')) {
-                const box = event.target.parentElement;
+        
+        // Add event listeners to new trash icons for removing items
+        const trashIcons = shoppingCartContainer.querySelectorAll('.trash-icon');
+        trashIcons.forEach(icon => {
+            icon.addEventListener('click', function(){
+                const box = this.parentElement;
                 const index = box.getAttribute('data-index');
                 removeCartItem(index);
-            }
+            });
         });
-
-        // Checkout button event
+        
+        // Add event listener to checkout button
         const checkoutBtn = document.getElementById('checkout-btn');
-        if (checkoutBtn) {
-            checkoutBtn.addEventListener('click', function(e) {
+        if(checkoutBtn){
+            checkoutBtn.addEventListener('click', function(e){
                 e.preventDefault();
-                if (cartItems.length === 0) {
+                if(cartItems.length === 0) {
                     alert("Your cart is empty!");
                 } else {
                     alert("Checkout process initiated!");
+                    // Clear cart items after checkout
                     cartItems = [];
                     updateCartDisplay();
                 }
             });
         }
     }
-
+    
+    // Function to remove a cart item by index
     function removeCartItem(index) {
         cartItems.splice(index, 1);
         updateCartDisplay();
     }
-
-    // Add to cart functionality
-    document.addEventListener('click', function(event) {
-        if (event.target.classList.contains('add-to-cart')) {
-            const itemElement = event.target.closest('.col-md-3'); // Fix: Selecting correct parent
+    
+    // Add event listeners to all "Add to Cart" buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(){
+            const itemElement = this.parentElement;
             const name = itemElement.getAttribute('data-name');
             const price = parseFloat(itemElement.getAttribute('data-price'));
+            // Retrieve product image from the item element
             const img = itemElement.querySelector('img').src;
-
+            
+            // Check if the item is already in the cart; if so, increase its quantity
             let existingItem = cartItems.find(item => item.name === name);
-            if (existingItem) {
+            if(existingItem){
                 existingItem.qty += 1;
             } else {
-                cartItems.push({ name, price, qty: 1, img });
+                cartItems.push({name, price, qty: 1, img});
             }
             updateCartDisplay();
-        }
+        });
     });
-
-    // Initialize empty cart
+    
+    // Clear the shopping cart on page load (removes static items)
     shoppingCartContainer.innerHTML = `
-        <div class="total">Total: ₱0.00</div>
-        <a href="#" class="btn" id="checkout-btn">Checkout</a>
+        <div class="total">total : ₱0.00</div>
+        <a href="#" class="btn" id="checkout-btn">checkout</a>
     `;
-
+    
+    // Initial update to set up the empty cart
     updateCartDisplay();
 });
