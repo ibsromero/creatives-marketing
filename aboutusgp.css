@@ -4,23 +4,29 @@ body {
     
 }
 
-/* Header */
-			.topnav {
-				overflow: hidden;
-				background-color: white; /* Background color of list talk ref and search */
-			}
-			.topnav a {
-				float: right;
-				display: block;
-				color: #1B1212; /* Talk */
-				text-align: center;
-				padding: 20px;
-				text-decoration: none;
-			}
-			.topnav a:hover {
-				background-color: #1B1212; /* List Hovering */
-				color: white;
-			}
+.button {
+            background-color: #1B1212; /* black background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make it inline */
+            font-size: 16px; /* Font size */
+            margin: 10px; /* Adjustable margin */
+            cursor: pointer; /* Pointer cursor on hover */
+            position: absolute; /* Position the button absolutely */
+            bottom: 75px; /* Distance from the bottom */
+            left: 200px; /* Distance from the left */
+			box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+
+        }
+		
+		.button:hover {
+            background-color: grey; /* Darker green on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
 
 
 
