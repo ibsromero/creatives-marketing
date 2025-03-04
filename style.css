@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 .carousel-inner img {
-    max-width: 70%; /* Adjust as needed */
-    max-height: 300px; /* Adjust height as needed */
-    margin: auto; /* Centers the images */
+    max-width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 300px; 
+    display: block;
+    margin: auto;
+    object-fit: contain;
 }
+
+
 :root{
     --orange:#ff7800;
     --black:#130f40;
