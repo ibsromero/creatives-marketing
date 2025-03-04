@@ -18,13 +18,6 @@
     <!-- Custom CSS & JS -->
     <link rel="stylesheet" href="style.css">
     <script type="module" src="java1.js"></script>
-
-    import { setupCart } from './cart.js';
-
-document.addEventListener("DOMContentLoaded", () => {
-    setupCart();
-});
-
 </head>
 <body>
 
@@ -75,14 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- Bootstrap Carousel -->
 <div id="demo" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
     <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
         <li data-target="#demo" data-slide-to="1"></li>
         <li data-target="#demo" data-slide-to="2"></li>
     </ul>
 
-    <!-- The slideshow -->
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="images/valorant1.jpg" alt="Item 1" class="d-block w-100">
@@ -95,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     </div>
 
-    <!-- Controls -->
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </a>
@@ -108,29 +98,16 @@ document.addEventListener("DOMContentLoaded", () => {
 <section class="container mt-4">
     <h2 class="text-center">Featured Items</h2>
     <div class="row">
-        <!-- Repeated Product Items -->
-        <div class="col-md-3 text-center" data-name="Product 1" data-price="100">
+        <div class="col-md-3 text-center product" data-name="Product 1" data-price="100">
             <img src="https://via.placeholder.com/150" alt="Product 1">
             <h5>Product 1</h5>
             <p>₱100</p>
             <button class="btn btn-primary add-to-cart">Add to Cart</button>
         </div>
-        <div class="col-md-3 text-center" data-name="Product 2" data-price="200">
+        <div class="col-md-3 text-center product" data-name="Product 2" data-price="200">
             <img src="https://via.placeholder.com/150" alt="Product 2">
             <h5>Product 2</h5>
             <p>₱200</p>
-            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-        </div>
-        <div class="col-md-3 text-center" data-name="Product 3" data-price="300">
-            <img src="https://via.placeholder.com/150" alt="Product 3">
-            <h5>Product 3</h5>
-            <p>₱300</p>
-            <button class="btn btn-primary add-to-cart">Add to Cart</button>
-        </div>
-        <div class="col-md-3 text-center" data-name="Product 4" data-price="400">
-            <img src="https://via.placeholder.com/150" alt="Product 4">
-            <h5>Product 4</h5>
-            <p>₱400</p>
             <button class="btn btn-primary add-to-cart">Add to Cart</button>
         </div>
     </div>
@@ -139,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- Footer -->
 <footer class="footer text-center py-4">
     <p>&copy; 2025 Creatives Marketing. All rights reserved.</p>
-    <p>John Paul Consulation | Ibrahim Romero | Dwayne Marrion Montanez | Bastique Xzer Johan C. Magsalin</p>
 </footer>
 
 <!-- Custom JS -->
