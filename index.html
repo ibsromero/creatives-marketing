@@ -219,45 +219,7 @@ body
 	.btn:hover{
 		background: var(--orange);
 		color: #fff;
-	}
-	.header .login-form{
-		width: 35rem;
-		background-color: #fff;
-		box-shadow: var(--box-shadow);
-		padding: 2rem;
-		border-radius: .5rem;
-		text-align: center;
-		top: 110%; right: -110%;
-		position: absolute;
-	}
-	 .header .login-form.active{
-		right: 2rem;
-		transition: .4s linear;
-	 }
-	.header .login-form h3{
-		font-size: 2.5rem;
-		color: var(--black);
-		text-transform: uppercase;
-	}
-	.header .login-form .box{
-		width: 100%;
-		margin: .7rem 0;
-		background: #eee;
-		border-radius: .5rem;
-		padding: 1rem;
-		font-size: 1.6rem;
-		color: var(--black);
-		text-transform: none;
-	}
-	.header .login-form p{
-		font-size: 1.4rem;
-		padding: .5rem 0;
-		color: var(--light-color);
-	}
-	.header .login-form p a{
-		color: var(--orange);
-		text-decoration: underline;
-	}
+
 
 	/* Navbar Styling */
 	.header {
@@ -540,18 +502,8 @@ body
         <a href="#" class="btn">checkout</a>
     </div>
 
-    <form action="" class="login-form">
-        <h3>login now</h3>
-        <input type="email" placeholder="your email" class="box">
-        <input type="password" placeholder="your password" class="box">
-        <p>forget your password <a href="#">click here</a></p>
-        <p>don't have an account <a href="#">create now</a></p>
-        <input type="submit" value="login now" class="btn">
-    </form>
-
 </header>
 
-<!-- Header section end -->
 
 <!-- Bootstrap Carousel -->
 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -783,21 +735,7 @@ body
 		// Initial update to set up the empty cart
 		updateCartDisplay();
 	});
-	document.addEventListener("DOMContentLoaded", function(){
-    const loginForm = document.querySelector('.login-form');
-    if (loginForm) {
-        const paragraphs = loginForm.querySelectorAll('p');
-        paragraphs.forEach(p => {
-            // Remove paragraph if it contains the unwanted texts
-            if (
-                p.textContent.toLowerCase().includes("forget your password") || 
-                p.textContent.toLowerCase().includes("don't have an account")
-            ) {
-                p.remove();
-            }
-        });
-    }
-});
+	
 </script>
 
 </body>
