@@ -781,6 +781,21 @@ body
 		// Initial update to set up the empty cart
 		updateCartDisplay();
 	});
+	document.addEventListener("DOMContentLoaded", function(){
+    const loginForm = document.querySelector('.login-form');
+    if (loginForm) {
+        const paragraphs = loginForm.querySelectorAll('p');
+        paragraphs.forEach(p => {
+            // Remove paragraph if it contains the unwanted texts
+            if (
+                p.textContent.toLowerCase().includes("forget your password") || 
+                p.textContent.toLowerCase().includes("don't have an account")
+            ) {
+                p.remove();
+            }
+        });
+    }
+});
 </script>
 
 </body>
