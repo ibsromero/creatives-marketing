@@ -28,6 +28,7 @@ header {
 /* Navbar */
 .navbar {
     padding: 10px 15px;
+    background-color: #ff7800 !important;
 }
 
 .navbar-nav .nav-item {
