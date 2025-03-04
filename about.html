@@ -10,31 +10,23 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <style>
-	
+	.topnav {
+				overflow: hidden;
+				background-color: white; /* Background color of list talk ref and search */
+			}
+			.topnav a {
+				float: right;
+				display: block;
+				color: #1B1212; /* Talk */
+				text-align: center;
+				padding: 20px;
+				text-decoration: none;
+			}
+			.topnav a:hover {
+				background-color: #1B1212; /* List Hovering */
+				color: white;
+			}
 
-.button {
-            background-color: #1B1212; /* black background */
-            border: none; /* Remove borders */
-            color: white; /* White text */
-            padding: 10px 20px; /* Padding */
-            text-align: center; /* Center text */
-            text-decoration: none; /* Remove underline */
-            display: inline-block; /* Make it inline */
-            font-size: 16px; /* Font size */
-            margin: 10px; /* Adjustable margin */
-            cursor: pointer; /* Pointer cursor on hover */
-            position: absolute; /* Position the button absolutely */
-            bottom: 75px; /* Distance from the bottom */
-            left: 200px; /* Distance from the left */
-			box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Shadow effect */
-            transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
-
-        }
-		
-		.button:hover {
-            background-color: grey; /* Darker green on hover */
-            transform: translateY(-2px); /* Slight lift effect on hover */
-        }
 
 
 
@@ -87,7 +79,12 @@ table {
 
 
 <body>
-
+<div class="topnav">
+		
+		<a href="index">Home</a>
+		
+		
+		</div>
 <br><br><br>
 <p style="font-family: Arial, sans-serif; font-size: 30px; margin-left: 150px;">Our Story</p>
 <img src="images/logo.png" width="500" height="500"
@@ -102,7 +99,7 @@ Our offerings include a variety of corporate giveaways designed to leave a lasti
  Our team of experts is committed to collaborating with you to develop unique concepts that align with your marketing goals. We pride ourselves on our attention to detail and commitment to quality, turning ordinary gifting into  
  extraordinary experiences. Join us on this journey of creativity and innovation, and let us help you transform your marketing efforts into something truly remarkable that fosters lasting relationships with your audience.</p>
 
-<a href="index.html" class="button">HOME</a>
+
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <p style="font-family: Arial, sans-serif; font-size: 30px; margin-left: 800px;">WHY CHOOSE CMI?</p>
     <table>
