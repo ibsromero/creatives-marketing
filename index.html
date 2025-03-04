@@ -17,7 +17,14 @@
     
     <!-- Custom CSS & JS -->
     <link rel="stylesheet" href="style.css">
-    <script src="java1.js" defer></script>
+    <script type="module" src="java1.js"></script>
+
+    import { setupCart } from './cart.js';
+
+document.addEventListener("DOMContentLoaded", () => {
+    setupCart();
+});
+
 </head>
 <body>
 
