@@ -20,25 +20,33 @@
 <header class="header d-flex justify-content-between align-items-center p-3 bg-light">
     <img src="images/logo.png" alt="We Deliver Smiles" class="img-fluid" 
      style="max-width: 100px; background: none;">
-    <nav class="navbar">
-        <a href="#home">Home</a>
-		<div class="dropdown">
-            <a class="dropdown-toggle" href="#" id="categoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categories
-            </a>
-            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
-                <a class="dropdown-item" href="#Fashion">Fashion</a>
-                <a class="dropdown-item" href="#School-Supplies">School Supplies</a>
-                <a class="dropdown-item" href="#Furniture-Extras">Furniture & Extras</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header">School Supplies</h6></li>
+                            <li><a class="dropdown-item" href="notebook.html">Notebook</a></li>
+                            <li><a class="dropdown-item" href="ballpen.html">Stationery</a></li>
+                            <li><h6 class="dropdown-header">Fashion</h6></li>
+                            <li><a class="dropdown-item" href="jacket.html">Clothing</a></li>
+                            <li><a class="dropdown-item" href="cap.html">Accessories</a></li>
+                            <li><h6 class="dropdown-header">Furniture & Extras</h6></li>
+                            <li><a class="dropdown-item" href="lamp.html">Lamp</a></li>
+                            <li><a class="dropdown-item" href="tumblr.html">Tumbler and Mug</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="faqs.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
-        </div>  
-        <a href="#About US">About Us</a>  
-        <a href="#FAQS">FAQS</a>  
-        
-        <a href="#review">Testimonials</a>  
-        <a href="#blogs">Contact Us</a>  
+        </div>
     </nav>
-
     <div class="icons">
       <div class="fas fa-bars" id="menu-btn"></div>
       <div class="fas fa-search" id="search-btn"></div>
